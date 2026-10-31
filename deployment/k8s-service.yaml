@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: churn-prediction-service
+spec:
+  type: NodePort
+  selector:
+    app: churn-prediction
+  ports:
+    - port: 8000
+      targetPort: 8000
+      nodePort: 30080
