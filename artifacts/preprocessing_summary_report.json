@@ -1,5 +1,5 @@
 {
-    "validation_status": "PASSED",
+    "validation_status": "FAILED",
     "matrix_dimensions": {
         "X_train_shape": [
             5635,
@@ -17,8 +17,10 @@
         ]
     },
     "data_quality": {
-        "missing_values_X_train": 0,
+        "missing_values_X_train": 1,
         "missing_values_X_test": 0
     },
-    "errors": []
+    "errors": [
+        "NaNs detected in X_train after preprocessing."
+    ]
 }

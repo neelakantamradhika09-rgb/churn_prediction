@@ -4,8 +4,8 @@
         "registered_name": "Telco_Churn_Production_Model",
         "version": 1,
         "current_stage": "Production",
-        "run_id": "63263a662f684320a55aa58b7b5c1c8e",
-        "artifact_uri": "models:/m-137a91949bc6491098e1649d33b6d2f3"
+        "run_id": "d844ee8d8d114573b98d4e15bf121994",
+        "artifact_uri": "models:/m-e8fea9bae4314220a6747a8245d9d26b"
     },
     "performance_metrics": {
         "recall": 0.7005347593582888,
