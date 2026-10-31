@@ -1,4 +1,4 @@
-name: Lab 8 - MLOps CI
+name: MLOps CI
 
 on:
   push:
