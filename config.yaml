@@ -1,0 +1,71 @@
+# Churn Prediction MLOps Configuration
+project:
+  name: churn-prediction
+  random_state: 42
+
+data:
+  raw_path: data/raw/churn.csv
+  processed_dir: data/processed
+  target_column: Churn
+  id_column: customerID
+
+split:
+  test_size: 0.2
+  random_state: 42
+
+paths:
+  preprocessor: models/preprocessor.pkl
+  model: models/churn_model.pkl
+  random_forest: models/random_forest_model.pkl
+  random_forest_baseline: models/random_forest_baseline.pkl
+  decision_tree_baseline: models/decision_tree_baseline.pkl
+  full_pipeline: models/churn_full_pipeline.pkl
+  xgboost_pipeline: models/churn_xgboost_pipeline.pkl
+  one_hot_encoder: models/ohe.pkl
+  decision_threshold: models/churn_decision_threshold.pkl
+  evaluation_report: reports/evaluation_report.json
+  quality_gate_report: reports/quality_gate_report.json
+  inference_output: outputs/inference_predictions.csv
+  failure_report: reports/failure_injection_report.json
+
+mlflow:
+  experiment_name: churn-prediction
+  tracking_uri: sqlite:///mlflow.db
+  registered_model_name: churn-prediction-model
+
+training:
+  model_type: RandomForestClassifier
+  n_estimators: 100
+  max_depth: 10
+  class_weight: balanced
+  random_state: 42
+
+evaluation:
+  threshold: 0.5
+  minimum_accuracy: 0.70
+  minimum_f1: 0.50
+  minimum_roc_auc: 0.70
+
+logging:
+  level: INFO
+  directory: logs
+
+artifacts:
+  directory: artifacts
+
+reports:
+  directory: reports
+quality_gate:
+  metric: f1_score
+  minimum_value: 0.50
+registry:
+  model_name: churn-prediction-model
+  decision_metric: f1_score
+model:
+  type: RandomForestClassifier
+  n_estimators: 100
+  max_depth: 10
+  class_weight: balanced
+  random_state: 42
+lab9:
+  repetitions: 3
