@@ -1,0 +1,2 @@
+schema_context,column,check,failure_case,index
+DataFrameSchema,,column_in_dataframe,Contract,
