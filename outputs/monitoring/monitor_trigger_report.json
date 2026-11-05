@@ -1,0 +1,12 @@
+{
+    "status": "no_new_data_retraining_skipped",
+    "drift_detected": true,
+    "new_data_present": true,
+    "pipeline_called": true,
+    "pipeline_exit_code": 0,
+    "pipeline_status": "passed",
+    "data_load_status": null,
+    "new_data_ingested": false,
+    "retraining_executed": false,
+    "timestamp": "2026-11-05T08:44:03.487951+00:00"
+}

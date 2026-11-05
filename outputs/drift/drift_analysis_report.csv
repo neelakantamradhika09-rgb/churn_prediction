@@ -1,0 +1,5 @@
+category,metric,value,status,details
+Data Drift,Features with drift,2.0,DRIFT,"MonthlyCharges, TotalCharges"
+Prediction Drift,Prediction distribution,0.1092973740241305,DRIFT,KS statistic
+Prediction Drift,Probability distribution,0.2313697657913414,DRIFT,KS statistic
+Concept Drift,Degraded performance metrics,4.0,DRIFT,"accuracy, recall, f1, roc_auc"
