@@ -1,0 +1,4 @@
+dataset,rows,churn,non_churn,churn_rate
+original_training,5635,1495,4140,0.265306
+post_drift_batch,1409,619,790,0.439319
+updated_training,7044,2114,4930,0.300114
