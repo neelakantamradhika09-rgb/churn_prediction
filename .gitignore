@@ -14,3 +14,8 @@ mlruns/
 *.db
 .env
 "@ | Set-Content .gitignore
+# MLflow local databases and backups
+mlflow.db_before_repair
+mlflow_backup*.db
+mlflow_repaired_*.db
+mlflow_repair_working.db
